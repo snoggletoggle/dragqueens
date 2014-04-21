@@ -83,7 +83,3 @@ function reroll(fav) {
 		pkmElim.push(0);
 	document.getElementsByTagName('span')[0].innerHTML = ''+ pkmElim.length;
 } 
-
-function goMobile() {
-	document.getElementById('css').setAttribute('href','mobi.css')
-}
