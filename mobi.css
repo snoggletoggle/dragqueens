@@ -6,8 +6,7 @@ p {
 	margin: 0px;
 }
 #choice img {
-	width: 384px;
-	height: 384px;
+	width: 40%;
 	background: #ffffff;
 }
 .disabled {
@@ -79,4 +78,10 @@ button.pkmn:hover {
 button.pkmn:active {
 	box-shadow: 0 0 #dddddd;
 	top: 6px;
+}
+#numbers {
+	font-size: 24px;
+}
+#skip {
+	height: 24px;
 }

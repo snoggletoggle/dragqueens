@@ -9,14 +9,14 @@
 		<div id="choice">
 			<div>
 				<h1 id="egg">Click on an egg to begin!</h1>
-				<button class="pkmn"><img src="images/egg.png" onclick="start()"></button><br>
+				<button class="pkmn"><img src="images/egg.png" onclick="start()"></button>
 				<button class="pkmn"><img src="images/egg.png" onclick="start()"></button>
 			</div>
 		</div>
 		<div id="footer">
 			<p id="numbers">
 				<span>---</span> / <span>721</span> eliminated
-				<button type="button" id="skip" disabled="disabled" onclick="reroll(3)">Skip</button><br>
+				<button type="button" id="skip" disabled="disabled" onclick="reroll(3)">Skip</button> &bull;
 				<span id="settings">
 					Generation:
 					<select onchange="updateGen(this.value)" enabled>
@@ -27,8 +27,7 @@
 						<option value="4">IV. (DPP)</option>
 						<option value="5">V. (BW)</option>
 						<option value="6">VI. (XY)</option>
-					</select>
-					</br>
+					</select> &bull; 
 					Only "new" Pok&eacute;mon:
 					<input type="checkbox" id="newPkm" selected="false" onchange="updateGen(document.getElementsByTagName('select')[0].value)"></input>
 				</span>
