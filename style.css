@@ -16,19 +16,14 @@ p {
 .disabled {
 	color:#C0C0C0;
 }
-#footer {
-	position:absolute;
-	bottom:0px;
-	margin:0px;
-	width:100%;
-}
-#footer div {
-	text-align:center;
-	font-size:.7em;
-}
-#footer #numbers {
+#numbers {
 	text-align: center;
-	margin-bottom: 5px;
+	margin: 10px;
+}
+#elim {
+	display: inline-block;
+	width: 24px;
+	margin: 0 3px 0 3px;
 }
 .fav {
 	z-index: -1;
@@ -41,10 +36,6 @@ p {
 	width: 14px;
 	text-align: center;
 }
-#settings {
-	display:inline-block;
-	padding:5px;
-}
 a {
 	text-decoration: none;
 }
@@ -53,14 +44,6 @@ a:hover {
 }
 #choice {
 	text-align: center;
-}
-#choice span {
-	display: inline-block;
-	width: 30px;
-	text-align: center;
-}
-#gamestuff {
-	border-bottom: 1px solid #ffffff;
 }
 button.pkmn {
 	background-color: #ffffff;
@@ -87,4 +70,7 @@ button.pkmn:hover {
 button.pkmn:active {
 	box-shadow: 0 0 #dddddd;
 	top: 6px;
+}
+#info {
+	text-align: center;
 }

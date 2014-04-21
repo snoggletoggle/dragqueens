@@ -12,9 +12,9 @@
 				<button class="pkmn"><img src="images/egg.png" onclick="start()"></button>
 			</div>
 		</div>
-		<div id="footer">
-			<p id="numbers">
-				<span>---</span> / <span>721</span> eliminated
+		<div id="info">
+			<div id="numbers">
+				<span id="elim">---</span> / <span id="elim">721</span> eliminated
 				<button type="button" id="skip" disabled="disabled" onclick="reroll(3)">Skip</button>
 				<span id="settings">
 					Generation:
@@ -27,7 +27,6 @@
 						<option value="5">V. (BW)</option>
 						<option value="6">VI. (XY)</option>
 					</select>
-					</br>
 					Only "new" Pok&eacute;mon:
 					<input type="checkbox" id="newPkm" selected="false" onchange="updateGen(document.getElementsByTagName('select')[0].value)"></input>
 				</span>
@@ -35,7 +34,7 @@
 					document.getElementById('newPkm').removeAttribute('disabled');
 					document.getElementsByTagName('select')[0].removeAttribute('disabled');
 				</script>
-			</p>
+			</div>
 			<div id="gamestuff">
 				<span class="overlay">2</span>
 				<img src="images/fill.png" class="fav">
@@ -55,10 +54,12 @@
 				<img src="images/fill.png" class="fav">
 				<span class="overlay">10</span>
 				<img src="images/fill.png" class="fav">
-
-			</div>
-			<div>
-				Based on this <a href="http://www.contrib.andrew.cmu.edu/~msandbot/pokemon/">webpage</a> created by a student at Carnegie Mellon. Pok&eacute;mon sprites are from Smogon. <a href="http://www.smogon.com/download/sprites/bw/">(Gen 1 - 5)</a> <a href="http://www.smogon.com/media/sprites/xy/front/">(Gen 6)</a>. Diancie, Hoopa, and Volcanion sprites by <a href="http://quanyails.deviantart.com/art/Diancie-Hoopa-and-Volcanion-410722579">Quanyails</a>. The original source by fio4ri can be viewed <a href="https://github.com/fio4ri/FavoritePokemon">here</a> and the current source by Quetzle can be viewed <a href="https://github.com/quetzle/FavoritePokemon">here</a>.</br>
+				<div id="about">
+					Based on this <a href="http://www.contrib.andrew.cmu.edu/~msandbot/pokemon/">webpage</a> created by a student at Carnegie Mellon.<br>
+					Pok&eacute;mon sprites are from Smogon. <a href="http://www.smogon.com/download/sprites/bw/">(Gen 1 - 5)</a> <a href="http://www.smogon.com/media/sprites/xy/front/">(Gen 6)</a><br>
+					Diancie, Hoopa, and Volcanion sprites by <a href="http://quanyails.deviantart.com/art/Diancie-Hoopa-and-Volcanion-410722579">Quanyails</a>.<br>
+					The original source by fio4ri can be viewed <a href="https://github.com/fio4ri/FavoritePokemon">here</a> and the current source by Quetzle can be viewed <a href="https://github.com/quetzle/FavoritePokemon">here</a>.
+				</div>
 			</div>
 		</div>
 	</body>
