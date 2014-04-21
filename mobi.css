@@ -1,0 +1,90 @@
+body {
+	margin:0px;
+	font-family: sans-serif;
+}
+p {
+	margin: 0px;
+}
+#choice div {
+	margin-top: 100px;
+}
+#choice img {
+	width: 384px;
+	height: 384px;
+	background: #ffffff;
+}
+.disabled {
+	color:#C0C0C0;
+}
+#footer {
+	position:absolute;
+	bottom:0px;
+	margin:0px;
+	width:100%;
+}
+#footer div {
+	text-align:center;
+	font-size:.7em;
+}
+#footer #numbers {
+	text-align: center;
+	margin-bottom: 5px;
+}
+.fav {
+	z-index: -1;
+	border: solid 1px #ffffff;
+	background-color: #ffffff;
+}
+.overlay {
+	position: absolute;
+	background-color: #ffffff;
+	width: 14px;
+	text-align: center;
+}
+#settings {
+	display:inline-block;
+	padding:5px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+#choice {
+	text-align: center;
+}
+#choice span {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+}
+#gamestuff {
+	border-bottom: 1px solid #ffffff;
+}
+button.pkmn {
+	background-color: #ffffff;
+	box-shadow: 0 4px #dddddd;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	border: solid #dddddd 1px;
+	border-radius: 5px;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+}
+button.pkmn:hover {
+	box-shadow: 0 2px #dddddd;
+	top: 2px;
+}
+button.pkmn:active {
+	box-shadow: 0 0 #dddddd;
+	top: 6px;
+}
