@@ -9,7 +9,7 @@ function start() {
 	document.getElementById('newPkm').setAttribute('disabled', 'disabled');
 	document.getElementById('settings').className = 'disabled';
 	document.getElementById('skip').removeAttribute('disabled');
-
+	document.getElementById('egg').innerHTML='Choose your favorite!';
 	//make sure the gen used will be what is selected
 	pkmElim = new Array();
 	pkmLike.length = 0;;
