@@ -5,9 +5,6 @@ body {
 p {
 	margin: 0px;
 }
-#choice div {
-	margin-top: 100px;
-}
 #choice img {
 	width: 384px;
 	height: 384px;
@@ -17,7 +14,6 @@ p {
 	color:#C0C0C0;
 }
 #footer {
-	position:absolute;
 	bottom:0px;
 	margin:0px;
 	width:100%;
@@ -40,10 +36,6 @@ p {
 	background-color: #ffffff;
 	width: 14px;
 	text-align: center;
-}
-#settings {
-	display:inline-block;
-	padding:5px;
 }
 a {
 	text-decoration: none;
