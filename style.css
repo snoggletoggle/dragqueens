@@ -6,7 +6,7 @@ p {
 	margin: 0px;
 }
 #choice {
-	margin-top: 50px;
+	margin-top: 25px;
 }
 #choice img {
 	width: 384px;
@@ -29,6 +29,8 @@ p {
 	z-index: -1;
 	border: solid 1px #ffffff;
 	background-color: #ffffff;
+	width: 96px;
+	height: 96px;
 }
 .overlay {
 	position: absolute;
@@ -71,5 +73,5 @@ button.pkmn:active {
 	width: 192px;
 	height: 192px;
 	text-align: center;
-	margin: 0px;
+	margin: 5px 0 5px 0;
 }
