@@ -2,22 +2,21 @@
 	<head>
 		<title>Favorite Pok&eacute;mon Chooser</title>
 		<link href="style.css" rel="stylesheet" type="text/css" id="css">
+		<meta name="viewport" content="user-scalable=no" />
 		<script src="script.js"></script>
 	</head>
 	<body style="background-color:#F0F0F0">
 		<div id="choice">
-			<div>
-				<h1 id="egg">Click on an egg to begin!</h1>
-				<button class="pkmn"><img src="images/egg.png" onclick="start()"></button>
-				<button class="pkmn"><img src="images/egg.png" onclick="start()"></button>
-			</div>
+			<h1 id="egg">Click on an egg to begin!</h1>
+			<button class="pkmn" onclick="start()"><img src="images/egg.png"></button>
+			<button class="pkmn" onclick="start()"><img src="images/egg.png"></button>
 		</div>
 		<div id="info">
 			<div id="numbers">
-				<span id="elim">---</span> / <span id="elim">721</span> eliminated
+				<span id="elim">---</span> / <span id="elim">750</span> eliminated
 				<button type="button" id="skip" disabled="disabled" onclick="reroll(3)">Skip</button>
 				<span id="settings">
-					Generation:
+					Pok&eacute;mon:
 					<select onchange="updateGen(this.value)" enabled>
 						<option value="0">All</option>
 						<option value="1">I. (RBY)</option>
@@ -26,32 +25,36 @@
 						<option value="4">IV. (DPP)</option>
 						<option value="5">V. (BW)</option>
 						<option value="6">VI. (XY)</option>
+						<option value="7">Megas (XY)</option>
 					</select>
-					Only "new" Pok&eacute;mon:
+					Only Pok&eacute;mon from selection:
 					<input type="checkbox" id="newPkm" selected="false" onchange="updateGen(document.getElementsByTagName('select')[0].value)"></input>
 				</span>
 				<script>
 					document.getElementById('newPkm').removeAttribute('disabled');
 					document.getElementsByTagName('select')[0].removeAttribute('disabled');
 				</script><br><br>
+				<div id="images">
 				<span class="overlay">2</span>
-				<img src="images/fill.png" class="fav">
+				<img src="images/fill.png" class="fav" id="small" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
 				<span class="overlay">3</span>
-				<img src="images/fill.png" class="fav">
+				<img src="images/fill.png" class="fav" id="small" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
 				<span class="overlay">4</span>
-				<img src="images/fill.png" class="fav">
+				<img src="images/fill.png" class="fav" id="small" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
 				<span class="overlay">5</span>
-				<img src="images/fill.png" class="fav">
+				<img src="images/fill.png" class="fav" id="small" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
 				<span class="overlay">6</span>
-				<img src="images/fill.png" class="fav">
+				<img src="images/fill.png" class="fav" id="small" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
 				<span class="overlay">7</span>
-				<img src="images/fill.png" class="fav">
+				<img src="images/fill.png" class="fav" id="small" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
 				<span class="overlay">8</span>
-				<img src="images/fill.png" class="fav">
+				<img src="images/fill.png" class="fav" id="small" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
 				<span class="overlay">9</span>
-				<img src="images/fill.png" class="fav">
+				<img src="images/fill.png" class="fav" id="small" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
 				<span class="overlay">10</span>
-				<img src="images/fill.png" class="fav"><br>
+				<img src="images/fill.png" class="fav" id="small" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)"><br>
+				<img src="images/fill.png" id="big">
+				</div>
 				Based on this <a href="http://www.contrib.andrew.cmu.edu/~msandbot/pokemon/">webpage</a> created by a student at Carnegie Mellon.<br>
 				Pok&eacute;mon sprites are from Smogon. <a href="http://www.smogon.com/download/sprites/bw/">(Gen 1 - 5)</a> <a href="http://www.smogon.com/media/sprites/xy/front/">(Gen 6)</a><br>
 				Diancie, Hoopa, and Volcanion sprites by <a href="http://quanyails.deviantart.com/art/Diancie-Hoopa-and-Volcanion-410722579">Quanyails</a>.<br>

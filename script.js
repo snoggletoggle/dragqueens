@@ -1,5 +1,5 @@
 var limit = {
-	min: 1, max: 721
+	min: 1, max: 750
 };
 var pkmElim = new Array();
 var pkmLike = new Array();
@@ -18,9 +18,10 @@ function start() {
 }
 
 function updateGen(value, start) {
-	var _limits = [ [1, 721], 
+	var _limits = [ [1, 750], 
 					[1, 151], [152, 251], [252, 386], 
-					[387, 493], [494, 649], [650, 721]];
+					[387, 493], [494, 649], [650, 721],
+					[722, 750] ];
 	for(i = 0; i < _limits.length; i++) {
 		if(i == value) {
 			limit.min = document.getElementById('newPkm').checked ? _limits[i][0] : 1;
@@ -43,14 +44,16 @@ function reroll(fav) {
 	}
 	var _tmp = [document.getElementById('choice').getElementsByTagName('img')[0],
 				document.getElementById('choice').getElementsByTagName('img')[1]];
+	var _but = [document.getElementById('choice').getElementsByTagName('button')[0],
+				document.getElementById('choice').getElementsByTagName('button')[1]];
 		//parse the dex# from choice image
 		_tmp.push(_tmp[0].src.slice(_tmp[0].src.search(/[0-9]*.png/), _tmp[0].src.length - 4));
 		_tmp.push(_tmp[1].src.slice(_tmp[1].src.search(/[0-9]*.png/), _tmp[1].src.length - 4));
 
 	switch(fav) {
 		case 0: //It is the first roll. Need to change the image's onclick event
-			_tmp[0].setAttribute('onclick', 'reroll(1)');
-			_tmp[1].setAttribute('onclick', 'reroll(2)');
+			_but[0].setAttribute('onclick', 'reroll(1)');
+			_but[1].setAttribute('onclick', 'reroll(2)');
 			break;
 		case 1:
 			pkmElim.push(_tmp[3]);
@@ -83,3 +86,10 @@ function reroll(fav) {
 		pkmElim.push(0);
 	document.getElementsByTagName('span')[0].innerHTML = ''+ pkmElim.length;
 } 
+function enlargeThumb(img) {
+	var big = img.src;
+	document.getElementById('big').setAttribute('src',big);
+}
+function delargeThumb(img) {
+	document.getElementById('big').setAttribute('src','images/fill.png');
+}

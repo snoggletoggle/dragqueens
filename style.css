@@ -51,14 +51,9 @@ button.pkmn {
 	border: solid #dddddd 1px;
 	border-radius: 5px;
 	display: inline-block;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 700;
 	outline: none;
 	position: relative;
-	-webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	transition: all 0.2s;
+	padding: 5px;
 }
 button.pkmn:hover {
 	box-shadow: 0 2px #dddddd;
@@ -68,6 +63,13 @@ button.pkmn:active {
 	box-shadow: 0 0 #dddddd;
 	top: 4px;
 }
-#info {
+#images img {
+	box-shadow: 0 2px #dddddd;
+	background-color: #ffffff;
+}
+#big {
+	width: 192px;
+	height: 192px;
 	text-align: center;
+	margin: 0px;
 }
