@@ -34,7 +34,6 @@ p {
 }
 .overlay {
 	position: absolute;
-	background-color: #ffffff;
 	width: 14px;
 	text-align: center;
 }
