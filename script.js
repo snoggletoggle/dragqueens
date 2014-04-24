@@ -21,13 +21,16 @@ function updateGen(value, start) {
 	var _limits = [ [1, 721], 
 					[1, 151], [152, 251], [252, 386], 
 					[387, 493], [494, 649], [650, 721],
-					[1, 54], [1, 382], [1, 750], [650, 750] ];
-	if(value == 7 || value == 8) {
+					[1, 54], [1, 382], [1, 750], [650, 750],
+					[722, 750] ];
+	if(value == 7 || value == 8 || value == 11) {
 		document.getElementById('newPkm').setAttribute('checked');
 		document.getElementById('newPkm').setAttribute('disabled','disabled');
+		document.getElementById('only').className = 'disabled';
 	} else {	
 		document.getElementById('newPkm').removeAttribute('disabled');
 		document.getElementById('newPkm').removeAttribute('checked');
+		document.getElementById('only').className = 'enabled';
 	}
 	for(i = 0; i < _limits.length; i++) {
 		if(i == value) {
@@ -82,10 +85,13 @@ function reroll(fav) {
 		var x = document.getElementsByClassName('fav');
 		if(dropSel == 7) {
 			x[pkmLike.length - 1].src = 'images/starters/' + pkmElim[pkmElim.length -1] + '.png';
-		} else if(dropSel ==8) {
+			x[pkmLike.length - 1].setAttribute('style','background-color:#ffffff');
+		} else if(dropSel == 8) {
 			x[pkmLike.length - 1].src = 'images/fam/' + pkmElim[pkmElim.length -1] + '.png';
+			x[pkmLike.length - 1].setAttribute('style','background-color:#ffffff');
 		} else {
 			x[pkmLike.length - 1].src = 'images/' + pkmElim[pkmElim.length -1] + '.png';
+			x[pkmLike.length - 1].setAttribute('style','background-color:#ffffff');
 		}
 	}
 
@@ -98,7 +104,7 @@ function reroll(fav) {
 			_tmp[1].src = 'images/starters/' + pkmLike.splice(Math.floor(Math.random() * pkmLike.length),1) + '.png';
 		}
 	} else if(dropSel == 8) {
-			_tmp[0].src = 'images/fam/' + pkmLike.splice(Math.floor(Math.random() * pkmLike.length),1) + '.png';
+		_tmp[0].src = 'images/fam/' + pkmLike.splice(Math.floor(Math.random() * pkmLike.length),1) + '.png';
 		if(pkmLike.length == 0) {
 			_tmp[1].src = _tmp[0].src;
 		} else {
@@ -125,5 +131,5 @@ function enlargeThumb(img) {
 	document.getElementById('big').setAttribute('src',big);
 }
 function delargeThumb(img) {
-	document.getElementById('big').setAttribute('src','images/fill.png');
+	document.getElementById('big').setAttribute('src','images/big.png');
 }

@@ -1,6 +1,8 @@
 body {
 	margin:0px;
 	font-family: sans-serif;
+	background-color:#F0F0F0;
+	background-image:url('images/bg.png');
 }
 p {
 	margin: 0px;
@@ -11,7 +13,6 @@ p {
 #choice img {
 	width: 384px;
 	height: 384px;
-	background: #ffffff;
 }
 .disabled {
 	color:#C0C0C0;
@@ -27,10 +28,9 @@ p {
 }
 .fav {
 	z-index: -1;
-	border: solid 1px #ffffff;
-	background-color: #ffffff;
 	width: 96px;
 	height: 96px;
+	box-shadow: 0 2px #dddddd;
 }
 .overlay {
 	position: absolute;
@@ -59,14 +59,12 @@ button.pkmn {
 button.pkmn:hover {
 	box-shadow: 0 2px #dddddd;
 	top: 2px;
+	left: 1px;
 }
 button.pkmn:active {
-	box-shadow: 0 0 #dddddd;
+	box-shadow: 0 0;
 	top: 4px;
-}
-#images img {
-	box-shadow: 0 2px #dddddd;
-	background-color: #ffffff;
+	left: 2px;
 }
 #big {
 	width: 192px;

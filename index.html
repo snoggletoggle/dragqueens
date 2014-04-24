@@ -5,9 +5,11 @@
 		<meta name="viewport" content="user-scalable=no" />
 		<link rel="icon" href="images/favicon.png">
 		<link rel="shortcut icon" href="images/favicon.ico">
+		<script src="jquery.js"></script>
 		<script src="script.js"></script>
+		<script src="bg.js"></script>
 	</head>
-	<body style="background-color:#F0F0F0">
+	<body>
 		<div id="choice">
 			<h1 id="egg">Click on an egg to begin!</h1>
 			<button class="pkmn" onclick="start()"><img src="images/egg.png"></button>
@@ -36,12 +38,22 @@
 						<optgroup label="Mega Evolutions">
 							<option value="9">All</option>
 							<option value="10">VI. (XY)</option>
+							<option value="11">Only Megas</option>
 						</optgroup>
-					</select><br>
-					Only Pok&eacute;mon from selection:
-					<input type="checkbox" id="newPkm" onchange="updateGen(document.getElementsByTagName('select')[0].value)"><!--<br>
+					</select>
+					<br>
+					<span id="only">Only Pok&eacute;mon from selection:
+					<input type="checkbox" id="newPkm" onchange="updateGen(document.getElementsByTagName('select')[0].value)"></span><!--<br>
 					Turn off legendaries: 
-					<input type="checkbox" id="legendary" onclick="updateGen(document.getElementsByTagName('select')[0].value)">-->
+					<input type="checkbox" id="legendary" onclick="updateGen(document.getElementsByTagName('select')[0].value)">--><br>
+					Background:
+					<select id="bg" onchange="bgChange(this.value)" enabled>
+						<option>Solid Grey</option>
+						<option value="0">Gen 1 Pok&eacute;mon</option>
+						<option value="1">Pikachu</option>
+						<option value="2">Scraggy</option>
+						<option value="3">Pok&eacute;ball</option>
+					</select>
 				</div>
 				<script>
 					document.getElementById('newPkm').removeAttribute('disabled');
@@ -49,28 +61,29 @@
 				</script><br><br>
 				<div id="images">
 				<span class="overlay">2</span>
-				<img src="images/fill.png" class="fav" id="small" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
+				<img src="images/fill.png" class="fav" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
 				<span class="overlay">3</span>
-				<img src="images/fill.png" class="fav" id="small" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
+				<img src="images/fill.png" class="fav" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
 				<span class="overlay">4</span>
-				<img src="images/fill.png" class="fav" id="small" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
+				<img src="images/fill.png" class="fav" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
 				<span class="overlay">5</span>
-				<img src="images/fill.png" class="fav" id="small" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
+				<img src="images/fill.png" class="fav" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
 				<span class="overlay">6</span>
-				<img src="images/fill.png" class="fav" id="small" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
+				<img src="images/fill.png" class="fav" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
 				<span class="overlay">7</span>
-				<img src="images/fill.png" class="fav" id="small" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
+				<img src="images/fill.png" class="fav" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
 				<span class="overlay">8</span>
-				<img src="images/fill.png" class="fav" id="small" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
+				<img src="images/fill.png" class="fav" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
 				<span class="overlay">9</span>
-				<img src="images/fill.png" class="fav" id="small" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
+				<img src="images/fill.png" class="fav" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
 				<span class="overlay">10</span>
-				<img src="images/fill.png" class="fav" id="small" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)"><br>
-				<img src="images/fill.png" id="big">
+				<img src="images/fill.png" class="fav" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)"><br>
+				<img src="images/big.png" id="big">
 				</div>
 				Based on this <a href="http://www.contrib.andrew.cmu.edu/~msandbot/pokemon/">webpage</a> created by a student at Carnegie Mellon.<br>
 				Pok&eacute;mon sprites are from Smogon. <a href="http://www.smogon.com/download/sprites/bw/">(Gen 1 - 5)</a> <a href="http://www.smogon.com/media/sprites/xy/front/">(Gen 6)</a><br>
 				Diancie, Hoopa, and Volcanion sprites by <a href="http://quanyails.deviantart.com/art/Diancie-Hoopa-and-Volcanion-410722579">Quanyails</a>.<br>
+				Background images from <a href="http://imgur.com/a/ckatZ">here</a> modified by me.<br>
 				The original source by fio4ri can be viewed <a href="https://github.com/fio4ri/FavoritePokemon">here</a> and the current source by Quetzle can be viewed <a href="https://github.com/quetzle/FavoritePokemon">here</a>.
 			</div>
 		</div>
