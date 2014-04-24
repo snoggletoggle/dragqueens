@@ -23,7 +23,11 @@ function updateGen(value, start) {
 					[387, 493], [494, 649], [650, 721],
 					[1, 54], [1, 382], [1, 750], [650, 750],
 					[722, 750] ];
-	if(value == 7 || value == 8 || value == 11) {
+	if(value == 0) {
+		document.getElementById('newPkm').removeAttribute('checked');
+		document.getElementById('newPkm').setAttribute('disabled','disabled');
+		document.getElementById('only').className = 'disabled';
+	} else if(value == 7 || value == 8 || value == 11) {
 		document.getElementById('newPkm').setAttribute('checked');
 		document.getElementById('newPkm').setAttribute('disabled','disabled');
 		document.getElementById('only').className = 'disabled';
@@ -46,7 +50,6 @@ function updateGen(value, start) {
 		}
 	}
 }
-
 function reroll(fav) {
 	var drop = document.getElementById("gen");
 	var dropSel = drop.options[drop.selectedIndex].value;

@@ -56,8 +56,9 @@
 					</select>
 				</div>
 				<script>
-					document.getElementById('newPkm').removeAttribute('disabled');
-					document.getElementsByTagName('select')[0].removeAttribute('disabled');
+					document.getElementById('newPkm').removeAttribute('checked');
+					document.getElementById('newPkm').setAttribute('disabled','disabled');
+					document.getElementById('only').className = 'disabled';
 				</script><br><br>
 				<div id="images">
 				<span class="overlay">2</span>
