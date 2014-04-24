@@ -23,7 +23,7 @@ function updateGen(value, start) {
 	var _limits = [ [1, 721], 
 					[1, 151], [152, 251], [252, 386], 
 					[387, 493], [494, 649], [650, 721],
-					[1, 54], [1, 382] ];
+					[1, 54], [1, 382], [1, 750], [650, 750] ];
 	if(value == 7 || value == 8) {
 		document.getElementById('newPkm').setAttribute('checked');
 		document.getElementById('newPkm').setAttribute('disabled','disabled');

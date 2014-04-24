@@ -20,15 +20,23 @@
 				<div id="settings">
 					Pok&eacute;mon:
 					<select id="gen" onchange="updateGen(this.value)" enabled>
-						<option value="0">All</option>
-						<option value="1">I. (RBY)</option>
-						<option value="2">II. (GSC)</option>
-						<option value="3">III. (RSE)</option>
-						<option value="4">IV. (DPP)</option>
-						<option value="5">V. (BW)</option>
-						<option value="6">VI. (XY)</option>
-						<option value="7">Starters</option>
-						<option value="8">Families / Final Evos</option>
+						<optgroup label="Generations">
+							<option value="0">All</option>
+							<option value="1">I. (RBY)</option>
+							<option value="2">II. (GSC)</option>
+							<option value="3">III. (RSE)</option>
+							<option value="4">IV. (DPP)</option>
+							<option value="5">V. (BW)</option>
+							<option value="6">VI. (XY)</option>
+						</optgroup>
+						<optgroup label="Categories">
+							<option value="7">Starters</option>
+							<option value="8">Families / Final Evos</option>
+						</optgroup>
+						<optgroup label="Mega Evolutions">
+							<option value="9">All</option>
+							<option value="10">VI. (XY)</option>
+						</optgroup>
 					</select><br>
 					Only Pok&eacute;mon from selection:
 					<input type="checkbox" id="newPkm" onchange="updateGen(document.getElementsByTagName('select')[0].value)"><br>
