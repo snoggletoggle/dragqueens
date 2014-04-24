@@ -67,8 +67,8 @@ function reroll(fav) {
 
 	switch(fav) {
 		case 0: //It is the first roll. Need to change the image's onclick event
-			_but[0].setAttribute('onclick', 'reroll(1)');
-			_but[1].setAttribute('onclick', 'reroll(2)');
+			_but[0].setAttribute('onclick', 'choosePkm(1)');
+			_but[1].setAttribute('onclick', 'choosePkm(2)');
 			break;
 		case 1:
 			pkmElim.push(_tmp[3]);
@@ -127,12 +127,7 @@ function reroll(fav) {
 	document.getElementsByTagName('span')[0].innerHTML = ''+ pkmElim.length;
 	if(document.getElementsByTagName('span')[0].innerHTML == '54' && dropSel == 7) {
 		document.getElementsByTagName('span')[0].innerHTML = '53';
+	} else if(document.getElementsByTagName('span')[0].innerHTML == '382' && dropSel == 8) {
+		document.getElementsByTagName('span')[0].innerHTML = '381';
 	}
-} 
-function enlargeThumb(img) {
-	var big = img.src;
-	document.getElementById('big').setAttribute('src',big);
-}
-function delargeThumb(img) {
-	document.getElementById('big').setAttribute('src','images/big.png');
 }

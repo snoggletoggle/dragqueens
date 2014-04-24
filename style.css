@@ -59,12 +59,10 @@ button.pkmn {
 button.pkmn:hover {
 	box-shadow: 0 2px #dddddd;
 	top: 2px;
-	left: 1px;
 }
 button.pkmn:active {
 	box-shadow: 0 0;
 	top: 4px;
-	left: 2px;
 }
 #big {
 	width: 192px;

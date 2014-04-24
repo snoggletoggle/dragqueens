@@ -7,7 +7,7 @@
 		<link rel="shortcut icon" href="images/favicon.ico">
 		<script src="jquery.js"></script>
 		<script src="script.js"></script>
-		<script src="bg.js"></script>
+		<script src="tool.js"></script>
 	</head>
 	<body>
 		<div id="choice">
@@ -18,7 +18,7 @@
 		<div id="info">
 			<div id="numbers">
 				<button type="button" id="skip" disabled="disabled" onclick="reroll(3)">Skip</button><br>
-				<span id="elim">---</span> / <span id="elim">721</span> eliminated<br>
+				<span id="elim">---</span> / <span id="total">721</span> eliminated<br>
 				<div id="settings">
 					Pok&eacute;mon:
 					<select id="gen" onchange="updateGen(this.value)" enabled>
@@ -62,24 +62,23 @@
 				</script><br><br>
 				<div id="images">
 				<span class="overlay">2</span>
-				<img src="images/fill.png" class="fav" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
+				<img src="images/fill.png" class="fav">
 				<span class="overlay">3</span>
-				<img src="images/fill.png" class="fav" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
+				<img src="images/fill.png" class="fav">
 				<span class="overlay">4</span>
-				<img src="images/fill.png" class="fav" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
+				<img src="images/fill.png" class="fav">
 				<span class="overlay">5</span>
-				<img src="images/fill.png" class="fav" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
+				<img src="images/fill.png" class="fav">
 				<span class="overlay">6</span>
-				<img src="images/fill.png" class="fav" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
+				<img src="images/fill.png" class="fav">
 				<span class="overlay">7</span>
-				<img src="images/fill.png" class="fav" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
+				<img src="images/fill.png" class="fav">
 				<span class="overlay">8</span>
-				<img src="images/fill.png" class="fav" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
+				<img src="images/fill.png" class="fav">
 				<span class="overlay">9</span>
-				<img src="images/fill.png" class="fav" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)">
+				<img src="images/fill.png" class="fav">
 				<span class="overlay">10</span>
-				<img src="images/fill.png" class="fav" onMouseOver="enlargeThumb(this)" onMouseOut="delargeThumb(this)"><br>
-				<img src="images/big.png" id="big">
+				<img src="images/fill.png" class="fav"><br><br>
 				</div>
 				Based on this <a href="http://www.contrib.andrew.cmu.edu/~msandbot/pokemon/">webpage</a> created by a student at Carnegie Mellon.<br>
 				Pok&eacute;mon sprites are from Smogon. <a href="http://www.smogon.com/download/sprites/bw/">(Gen 1 - 5)</a> <a href="http://www.smogon.com/media/sprites/xy/front/">(Gen 6)</a><br>
