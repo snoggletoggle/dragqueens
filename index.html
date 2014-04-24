@@ -16,10 +16,10 @@
 		<div id="info">
 			<div id="numbers">
 				<button type="button" id="skip" disabled="disabled" onclick="reroll(3)">Skip</button><br>
-				<span id="elim">---</span> / <span id="elim">750</span> eliminated &bull; 
-				<span id="settings">
+				<span id="elim">---</span> / <span id="elim">721</span> eliminated<br>
+				<div id="settings">
 					Pok&eacute;mon:
-					<select onchange="updateGen(this.value)" enabled>
+					<select id="gen" onchange="updateGen(this.value)" enabled>
 						<option value="0">All</option>
 						<option value="1">I. (RBY)</option>
 						<option value="2">II. (GSC)</option>
@@ -27,11 +27,16 @@
 						<option value="4">IV. (DPP)</option>
 						<option value="5">V. (BW)</option>
 						<option value="6">VI. (XY)</option>
-						<option value="7">Megas (XY)</option>
-					</select>
-					&bull; Only Pok&eacute;mon from selection:
-					<input type="checkbox" id="newPkm" selected="false" onchange="updateGen(document.getElementsByTagName('select')[0].value)"></input>
-				</span>
+						<option value="7">Starters</option>
+						<option value="8">Families / Final Evos</option>
+					</select><br>
+					Only Pok&eacute;mon from selection:
+					<input type="checkbox" id="newPkm" onchange="updateGen(document.getElementsByTagName('select')[0].value)"><br>
+					<!--Megas: 
+					<input type="checkbox" id="mega" onclick="megaOn()">
+					Legendaries: 
+					<input type="checkbox" id="legendary" onchange="" checked>-->
+				</div>
 				<script>
 					document.getElementById('newPkm').removeAttribute('disabled');
 					document.getElementsByTagName('select')[0].removeAttribute('disabled');
