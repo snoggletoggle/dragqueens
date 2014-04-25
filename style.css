@@ -21,7 +21,7 @@ p {
 	text-align: center;
 	margin: 10px;
 }
-#elim {
+#elim,#total {
 	display: inline-block;
 	width: 24px;
 	margin: 0 3px 0 3px;
