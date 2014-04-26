@@ -1,11 +1,15 @@
 $(function() {
 	var length = $('#bg > option').length - 1;
 	var rand = Math.floor(Math.random() * length);
-	$('body').css({'background-image': 'url(images/bg' + rand + '.png)'});
+	$('body').css('background', 'url(images/bg' + rand + '.png)');
 	$('#bg').val(rand);
 });
 function bgChange(val) {
-	$('body').css({'background-image': 'url(images/bg' + val + '.png)'});
+	if(val == 'grey') {
+		$('body').css('background', '#f0f0f0');
+	} else {
+		$('body').css('background', 'url(images/bg' + val + '.png)');
+	}
 }
 $(document).keydown(function(e){
     if (e.which == 37) { 

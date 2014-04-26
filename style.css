@@ -1,8 +1,7 @@
 body {
 	margin:0px;
 	font-family: sans-serif;
-	background-color:#F0F0F0;
-	background-image:url('images/bg.png');
+	background:#F0F0F0;
 }
 p {
 	margin: 0px;
