@@ -37,7 +37,8 @@ function updateGen(value, start) {
 		document.getElementById('newPkm').removeAttribute('checked');
 		document.getElementById('only').className = 'enabled';
 	}
-	for(i = 0; i < _limits.length; i++) {
+	var limlen = _limits.length;
+	for(i = 0; i < limlen; i++) {
 		if(i == value) {
 			limit.min = document.getElementById('newPkm').checked ? _limits[i][0] : 1;
 			limit.max = _limits[i][1];

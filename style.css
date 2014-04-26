@@ -45,7 +45,7 @@ a:hover {
 #choice {
 	text-align: center;
 }
-button.pkmn {
+button.pkmn,button.nohover {
 	background-color: #ffffff;
 	box-shadow: 0 4px #dddddd;
 	border: solid #dddddd 1px;

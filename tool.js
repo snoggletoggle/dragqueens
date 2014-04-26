@@ -34,7 +34,9 @@ function gameDone() {
 	var total = +totalNum;
 	if(typeof eliminated == 'number' && total - eliminated == 1) {
 		var btn = document.getElementsByClassName('pkmn')[1];
+		var btn2 = document.getElementsByClassName('pkmn')[0];
 		$(btn).css("display","none");
+		$(btn2).attr('class', 'nohover');
 		$("#egg").html("Your favorite Pok&eacute;mon is...");
 	} else {
 		var meh=1;
