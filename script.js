@@ -7,9 +7,9 @@ var pkmSeen = new Array();
 function start() {
 	var _tmp = document.getElementsByTagName('select')[0];
 	_tmp.setAttribute('disabled', 'disabled');
-	document.getElementById('newPkm').setAttribute('disabled', 'disabled');
 	document.getElementById('settings').className = 'disabled';
 	document.getElementById('skip').removeAttribute('disabled');
+	document.getElementById('elim').className = 'ingame';
 	document.getElementById('egg').innerHTML='Choose your favorite!';
 	//make sure the gen used will be what is selected
 	pkmElim = new Array();
@@ -24,7 +24,7 @@ function updateGen(value, start) {
 					[387, 493], [494, 649], [650, 721],
 					[1, 54], [1, 382], [1, 750], [650, 750],
 					[722, 750] ];
-	if(value == 0) {
+	if(value == 0 || value == 9) {
 		document.getElementById('newPkm').removeAttribute('checked');
 		document.getElementById('newPkm').setAttribute('disabled','disabled');
 		document.getElementById('only').className = 'disabled';
@@ -70,6 +70,7 @@ function reroll(fav) {
 		case 0: //It is the first roll. Need to change the image's onclick event
 			_but[0].setAttribute('onclick', 'choosePkm(1)');
 			_but[1].setAttribute('onclick', 'choosePkm(2)');
+			document.getElementById('newPkm').setAttribute('disabled','disabled');
 			break;
 		case 1:
 			pkmElim.push(_tmp[3]);
@@ -129,10 +130,8 @@ function reroll(fav) {
 	if(pkmElim.length == limit.max - 1)
 		pkmElim.push(0);
 	document.getElementsByTagName('span')[0].innerHTML = ''+ pkmElim.length;
-	if(document.getElementsByTagName('span')[0].innerHTML == '54' && dropSel == 7) {
-		document.getElementsByTagName('span')[0].innerHTML = '53';
-	} else if(document.getElementsByTagName('span')[0].innerHTML == '382' && dropSel == 8) {
-		document.getElementsByTagName('span')[0].innerHTML = '381';
+	if(document.getElementsByTagName('span')[0].innerHTML == document.getElementsByTagName('span')[1].innerHTML) {
+		document.getElementsByTagName('span')[0].innerHTML = document.getElementsByTagName('span')[1].innerHTML - 1;
 	}
 }
 function _newPkm() {

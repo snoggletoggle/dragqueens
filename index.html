@@ -5,20 +5,20 @@
 		<meta name="viewport" content="user-scalable=no" />
 		<link rel="icon" href="images/favicon.png">
 		<link rel="shortcut icon" href="images/favicon.ico">
-		<script src="jquery.js"></script>
+		<script src="jquery-1.10.2.js"></script>
 		<script src="script.js"></script>
 		<script src="tool.js"></script>
 	</head>
 	<body>
 		<div id="choice">
 			<h1 id="egg">Click on an egg to begin!</h1>
-			<button class="pkmn" onclick="start()"><img src="images/egg.png"></button>
-			<button class="pkmn" onclick="start()"><img src="images/egg.png"></button>
+			<button id="firstchoice" class="pkmn" onclick="start()"><img src="images/egg.png"></button>
+			<button id="secondchoice" class="pkmn" onclick="start()"><img src="images/egg.png"></button>
 		</div>
 		<div id="info">
 			<div id="numbers">
-				<button type="button" id="skip" disabled="disabled" onclick="reroll(3)">Skip</button><br>
-				<span id="elim">---</span> / <span id="total">721</span> eliminated<br>
+				<button id="skip" disabled="disabled" onclick="reroll(3)" disabled>Skip</button><br>
+				<span id="elim" class="before">---</span> / <span id="total">721</span> eliminated<br>
 				<div id="settings">
 					Pok&eacute;mon:
 					<select id="gen" onchange="updateGen(this.value)" enabled>
@@ -53,7 +53,17 @@
 						<option value="1">Pikachu</option>
 						<option value="2">Scraggy</option>
 						<option value="3">Pok&eacute;ball</option>
-					</select>
+					</select><br>
+					<button id="help" onClick="helpShow()">Help</button><br>
+					<div id="helpcontent">
+						<h2>Help</h2>
+						<h3>General</h3>
+						<p>This favorite Pok&eacute;mon chooser presents you with 2 Pok&eacute;mon to choose from. Click (or hit the corresponding arrow key) to select the Pok&eacute;mon you prefer.</p>
+						<p>You don't have to base your decisions based on who's your favorite, though: you can base it on whatever you want! Cutest Pok&eacute;mon, most useful Pok&eacute;mon, the list goes on.</p>
+						<h3>Choosing Sets</h3>
+						<p>To choose a set of Pok&eacute;mon, select from the dropdown list labelled "Pok&eacute;mon" with the default value "All". From this list, there are 3 groups: Generations, Categories, and Megas. In the Generations group, the options are to choose all generations (the default) or the individual generations. Choosing all will allow you to use all Pok&eacute;mon and choosing a specific generation will choose the Pok&eacute;mon introduced in that generation. In the Categories group, there is a group of miscellaneous collections of Pok&eacute;mon. In the Megas group, you can choose to play with every Pok&eacute;mon including the mega evolutions, the Generation VI Pok&eacute;mon including megas, and only the megas.</p>
+						<p>Checking off the "Only Pok&eacute;mon from Selection" will only include Pok&eacute;mon from the selected set. Otherwise, it includes all of the Pok&eacute;mon from the preceding categories in the group. Some sets are automatically set to a certain configuration for this option and cannot be changed.</p>
+					</div>
 				</div>
 				<script>
 					document.getElementById('newPkm').removeAttribute('checked');

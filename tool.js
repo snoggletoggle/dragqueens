@@ -7,6 +7,18 @@ $(function() {
 function bgChange(val) {
 	$('body').css({'background-image': 'url(images/bg' + val + '.png)'});
 }
+$(document).keydown(function(e){
+    if (e.which == 37) { 
+       $('#firstchoice').click();
+       return false;
+    } else if(e.which == 39) {
+       $('#secondchoice').click();
+		return false;
+	} else if(e.which == 40 && $("#elim").attr('class') == 'ingame') {
+       $('#skip').click();
+		return false;
+	}
+});
 function choosePkm(roll) {
 	reroll(roll);
 	gameDone();
@@ -37,8 +49,8 @@ function gameDone() {
 this.imagePreview = function(){	
 	/* CONFIG */
 		
-		xOffset = 206;
-		yOffset = -96;
+		xOffset = 300;
+		yOffset = -144;
 		
 		// these 2 variable determine popup's distance from the cursor
 		// you might want to adjust to get the right result
@@ -56,8 +68,8 @@ this.imagePreview = function(){
 			.css("z-index","10000")
 			.fadeIn("fast");
 		$("#tool")
-			.css("width","192px")
-			.css("height","192px");
+			.css("width","288px")
+			.css("height","288px");
     },
 	function(){
 		this.title = this.t;	
@@ -68,9 +80,9 @@ this.imagePreview = function(){
 			.css("top",(e.pageY - xOffset) + "px")
 			.css("left",(e.pageX + yOffset) + "px");
 		$("#tool")
-			.css("width","192px")
-			.css("height","192px");
-	});			
+			.css("width","288px")
+			.css("height","288px");
+	});	
 };
 
 
@@ -78,3 +90,14 @@ this.imagePreview = function(){
 $(document).ready(function(){
 	imagePreview();
 });
+
+function helpShow() {
+	$("#helpcontent")
+		.css("display","inline-block");
+	$("#help").attr("onClick","helpHide()");
+}
+function helpHide() {
+	$("#helpcontent")
+		.css("display","none");
+	$("#help").attr("onClick","helpShow()");
+}
