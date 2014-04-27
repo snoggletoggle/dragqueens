@@ -53,15 +53,10 @@ function gameDone() {
  */
  
 this.imagePreview = function(){	
-	/* CONFIG */
 		
 		xOffset = 300;
 		yOffset = -144;
 		
-		// these 2 variable determine popup's distance from the cursor
-		// you might want to adjust to get the right result
-		
-	/* END CONFIG */
 	$("img.fav").hover(function(e){
 		this.t = this.title;
 		this.title = "";	
@@ -85,14 +80,8 @@ this.imagePreview = function(){
 		$("#preview")
 			.css("top",(e.pageY - xOffset) + "px")
 			.css("left",(e.pageX + yOffset) + "px");
-		$("#tool")
-			.css("width","288px")
-			.css("height","288px");
 	});	
 };
-
-
-// starting the script on page load
 $(document).ready(function(){
 	imagePreview();
 });
