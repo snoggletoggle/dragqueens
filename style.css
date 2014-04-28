@@ -57,6 +57,7 @@ button.pkmn,button.nohover {
 button.pkmn:hover {
 	box-shadow: 0 2px #dddddd;
 	top: 2px;
+	cursor: pointer;
 }
 button.pkmn:active {
 	box-shadow: 0 0;
